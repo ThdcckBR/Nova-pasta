@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "name": "Heineken 600ml",
             "description": "Cerveja Lager Puro Malte, refrescante e de cor amarelo-dourada.",
             "price": 15.00,
-            "image": "images/Heineken-600ml.webp"
+            "image": "Heineken-600ml.webp"
             },
             {
             "id": 2,
             "name": "Stella Artois 550ml",
             "description": "Cerveja belga de sabor intenso e final suave.",
             "price": 16.00,
-            "image": "images/Stella-Artois-550ml.webp"
+            "image": "Stella-Artois-550ml.webp"
             }
         ],
         "bebidas": [
@@ -46,21 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
             "name": "Moscow Mule",
             "description": "Vodka, cerveja de gengibre e suco de limão. Servido na caneca de cobre.",
             "price": 32.00,
-            "image": "images/placeholder.png"
+            "image": "placeholder.png"
             },
             {
             "id": 11,
             "name": "Caipirinha blacks",
             "description": "Cachaça premium, limão taiti, e um toque secreto do bar.",
             "price": 25.00,
-            "image": "images/placeholder.png"
+            "image": "placeholder.png"
             },
             {
             "id": 12,
             "name": "Whisky Johnnie Walker Black Label",
             "description": "Dose do clássico whisky escocês 12 anos.",
             "price": 35.00,
-            "image": "images/placeholder.png"
+            "image": "placeholder.png"
             }
         ],
         "comidas_japonesas": [
@@ -69,14 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "name": "Sashimi de Salmão blacks",
             "description": "Finas fatias de salmão fresco ao molho cítrico da casa com fios de alho-poró.",
             "price": 48.00,
-            "image": "images/sashimi.png"
+            "image": "sashimi.png"
             },
             {
             "id": 21,
             "name": "Hot Roll Especial",
             "description": "Sushi empanado e frito com salmão, cream cheese e molho tarê.",
             "price": 38.00,
-            "image": "images/placeholder.png"
+            "image": "placeholder.png"
             }
         ],
         "pizzas": [
@@ -85,14 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
             "name": "Pizza de Camarão com Catupiry",
             "description": "Massa fina, molho de tomate artesanal, camarões salteados e catupiry cremoso.",
             "price": 75.00,
-            "image": "images/pizza.jpg"
+            "image": "pizza.jpg"
             },
             {
             "id": 31,
             "name": "Pizza de Rúcula com Tomate Seco",
             "description": "Mussarela de búfala, rúcula fresca, tomate seco e lascas de parmesão.",
             "price": 68.00,
-            "image": "images/pizza.jpg"
+            "image": "pizza.jpg"
             }
         ],
         "burgers_artesanais": [
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Burger blacks Clássico",
                 "description": "Pão brioche, blend de 180g da casa, queijo cheddar, alface, tomate e maionese especial.",
                 "price": 39.00,
-                "image": "images/placeholder.png"
+                "image": "placeholder.png"
             }
         ]
     }
