@@ -1,0 +1,307 @@
+/* ---- GERAL & VARIÁVEIS (TEMA OUTBACK) ---- */
+:root {
+    --bg-black: #0a0a0a;
+    --v-black-3: #18191B;
+    --card-bg: #1a1a1a;
+    --primary-red: #9d2a2b;
+    --hover-red: #c0392b;
+    --text-cream: #f4e9d8;
+    --text-hoverdas: #f9f9f9;
+    --text-muted: #a0a0a0;
+    --v-text:  #ECECEC;
+    --v-soft:  #B9B9B9;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    /* Paleta vinho (marca) */
+    --v-wine:       #7B1E2B; /* primário */
+    --v-wine-dark:  #5A0F18; /* hover/ativo */
+    --v-wine-ghost: #A13A45; /* foco/realce */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-black);
+    color: var(--text-cream);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo_site_header {
+  height: 36px;      /* desktop */
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.18));
+}
+
+.nav-link {
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--v-soft); /* Cor padrão */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.12s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--text-hoverdas); /* Cor ao passar o mouse ou focar */
+}
+
+.alinhar {
+    display: flex;
+    gap: .5rem;
+}
+
+.sss{
+    padding-left: 8px;
+}
+
+.botaocardapioopen {
+    white-space: nowrap;
+    width: 113px;
+    height: 30px;
+    padding: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: var(--v-wine);
+    transition: background-color 0.08s ease;
+    border-radius: 4px;
+    color: var(--v-soft);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaocardapioopen:hover,
+.botaocardapioopen:focus {
+    background-color: var(--v-wine-dark); /* Cor ao passar o mouse ou focar */
+}
+
+/* ---- HEADER ---- */
+header {
+    background: linear-gradient(180deg, #000 0%, #0b0b0b 100%);
+    box-shadow: 0 2px 14px rgba(0,0,0,.25);
+    height: 72px;
+
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--v-border);
+    margin-top: .5rem;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    color: var(--text-cream);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+.cart-icon img { width: 30px; height: 30px; }
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--primary-red);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid var(--bg-black);
+}
+
+/* ---- HERO SECTION ---- */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 0;
+    min-height: 60vh;
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('images/pizza.jpg') no-repeat center center/cover;
+}
+.hero-content h2 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--text-cream);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+}
+.cta-button {
+    background-color: var(--primary-red);
+    color: var(--text-cream);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover { background-color: var(--hover-red); }
+
+
+/* ---- FILTROS DO CARDÁPIO ---- */
+#menu-filters {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+#menu-filters h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.filter-btn:hover {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: var(--text-cream);
+}
+.filter-btn.active {
+    background: var(--primary-red);
+    border-color: var(--primary-red);
+    color: var(--text-cream);
+}
+
+/* ---- ITENS DO CARDÁPIO ---- */
+#menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.menu-item {
+    background: var(--card-bg);
+    border: 1px solid #282828;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+.menu-item-image { width: 100%; height: 155px; object-fit: cover; }
+.menu-item-details { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+.menu-item-details h4 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-cream);
+    text-transform: uppercase;
+}
+.menu-item-details p { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0; flex-grow: 1; }
+.menu-item-price { font-size: 1.4rem; font-weight: bold; color: var(--text-cream); margin-bottom: 1rem; }
+.add-to-cart-btn {
+    background: var(--primary-red);
+    color: var(--text-cream);
+    border: none;
+    padding: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+.add-to-cart-btn:hover { background: var(--hover-red); }
+
+/* ---- MODAL DO CARRINHO ---- */
+.modal { display: none; /* restante igual */ position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); }
+.modal-content { background-color: var(--card-bg); margin: 10% auto; padding: 30px; border: 2px solid var(--primary-red); width: 90%; max-width: 600px; position: relative; }
+.close-btn { color: var(--text-muted); position: absolute; top: 10px; right: 20px; font-size: 32px; font-weight: bold; cursor: pointer; }
+#cart-items-container { max-height: 40vh; overflow-y: auto; margin-bottom: 20px; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+.cart-item-info h5 { font-size: 1.1rem; }
+.cart-item-info p { font-size: 0.9rem; color: var(--text-muted); }
+.cart-item-controls button { background: var(--primary-red); color: var(--text-cream); border: none; width: 28px; height: 28px; cursor: pointer; font-size: 1.2rem; }
+.cart-item-controls span { margin: 0 12px; }
+.cart-item-controls .remove-item-btn { background: #555; margin-left: 15px; }
+.cart-summary { text-align: right; margin-top: 20px; }
+#cart-total { font-size: 1.6rem; color: var(--text-cream); font-weight: bold; }
+#checkout-btn {
+    background: var(--primary-red);
+    color: var(--text-cream);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+#checkout-btn:hover { background: var(--hover-red); }
+
+
+/* ---- FOOTER ---- */
+footer { text-align: center; padding: 2rem 0; margin-top: 4rem; background: var(--card-bg); color: var(--text-muted); border-top: 1px solid #282828; }
+
+/* ---- RESPONSIVIDADE ---- */
+@media (max-width: 768px) {
+    .logo { font-size: 1.8rem; }
+    .hero-content h2 { font-size: 2.5rem; }
+    .filter-buttons { gap: 0.5rem; }
+    .filter-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
+    #menu-items { grid-template-columns: 1fr; }
+}
