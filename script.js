@@ -12,100 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('blacksCart')) || [];
 
     // Carregar itens do menu do JSON ativar ao hospedar
-    //async function loadMenu() {
-    //    try {
-    //        const response = await fetch('menu.json');
-    //        menuData = await response.json();
-    //        displayMenuItems('all');
-    //    } catch (error) {
-    //        console.error('Erro ao carregar o cardápio:', error);
-    //        menuItemsContainer.innerHTML = '<p>Não foi possível carregar o cardápio. Tente novamente mais tarde.</p>';
-    //    }
-    //}
-
-    menuData = {
-        "cervejas": [
-            {
-            "id": 1,
-            "name": "Heineken 600ml",
-            "description": "Cerveja Lager Puro Malte, refrescante e de cor amarelo-dourada.",
-            "price": 15.00,
-            "image": "Heineken-600ml.webp"
-            },
-            {
-            "id": 2,
-            "name": "Stella Artois 550ml",
-            "description": "Cerveja belga de sabor intenso e final suave.",
-            "price": 16.00,
-            "image": "Stella-Artois-550ml.webp"
-            }
-        ],
-        "bebidas": [
-            {
-            "id": 10,
-            "name": "Moscow Mule",
-            "description": "Vodka, cerveja de gengibre e suco de limão. Servido na caneca de cobre.",
-            "price": 32.00,
-            "image": "placeholder.png"
-            },
-            {
-            "id": 11,
-            "name": "Caipirinha blacks",
-            "description": "Cachaça premium, limão taiti, e um toque secreto do bar.",
-            "price": 25.00,
-            "image": "placeholder.png"
-            },
-            {
-            "id": 12,
-            "name": "Whisky Johnnie Walker Black Label",
-            "description": "Dose do clássico whisky escocês 12 anos.",
-            "price": 35.00,
-            "image": "placeholder.png"
-            }
-        ],
-        "comidas_japonesas": [
-            {
-            "id": 20,
-            "name": "Sashimi de Salmão blacks",
-            "description": "Finas fatias de salmão fresco ao molho cítrico da casa com fios de alho-poró.",
-            "price": 48.00,
-            "image": "sashimi.png"
-            },
-            {
-            "id": 21,
-            "name": "Hot Roll Especial",
-            "description": "Sushi empanado e frito com salmão, cream cheese e molho tarê.",
-            "price": 38.00,
-            "image": "placeholder.png"
-            }
-        ],
-        "pizzas": [
-            {
-            "id": 30,
-            "name": "Pizza de Camarão com Catupiry",
-            "description": "Massa fina, molho de tomate artesanal, camarões salteados e catupiry cremoso.",
-            "price": 75.00,
-            "image": "pizza.jpg"
-            },
-            {
-            "id": 31,
-            "name": "Pizza de Rúcula com Tomate Seco",
-            "description": "Mussarela de búfala, rúcula fresca, tomate seco e lascas de parmesão.",
-            "price": 68.00,
-            "image": "pizza.jpg"
-            }
-        ],
-        "burgers_artesanais": [
-            {
-                "id": 40,
-                "name": "Burger blacks Clássico",
-                "description": "Pão brioche, blend de 180g da casa, queijo cheddar, alface, tomate e maionese especial.",
-                "price": 39.00,
-                "image": "placeholder.png"
-            }
-        ]
+    async function loadMenu() {
+        try {
+            const response = await fetch('menu.json');
+            menuData = await response.json();
+            displayMenuItems('all');
+        } catch (error) {
+            console.error('Erro ao carregar o cardápio:', error);
+            menuItemsContainer.innerHTML = '<p>Não foi possível carregar o cardápio. Tente novamente mais tarde.</p>';
+        }
     }
-    
     // Exibir itens do menu com base na categoria
     function displayMenuItems(category) {
         menuItemsContainer.innerHTML = '';
@@ -257,4 +173,5 @@ document.addEventListener('DOMContentLoaded', () => {
     displayMenuItems('all');
     loadMenu();
     updateCartCount();
+
 });
